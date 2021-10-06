@@ -8,6 +8,40 @@
 .white {
     color: #ffffff;
 }
+
+.corner{
+    border-radius: 50%;
+}
+
+.selected{
+     border-left: 2px solid lime;
+ }
+
+.selected-down{
+    padding-bottom: 2px;
+    border-bottom: 2px solid lime;
+    position: relative;
+}
+.selected-down-left{
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 40px;
+    height: 4px;
+    background-color: #141922;
+} 
+
+.selected-down-right {
+    bottom: -2px;
+    right: 0;
+    position: absolute;
+    width: 40px;
+    height: 4px;
+    background-color: #141922;
+}
+
+
+
 /* font */
 body {
     font-family: 'Montserrat', sans-serif;
@@ -42,10 +76,14 @@ header div{
     position: relative;
 }
 
+#main-body header a{
+    color: #ffff;
+}
+
 header a{
     position: absolute;
     top: 20px;
-    right: 250px;
+    right: 280px;
 
     text-decoration: none;
     color: #ffffff;
@@ -199,11 +237,15 @@ main{
     align-items: center;
     text-align: center;
     width: calc(100% / 6);
+
     /* debug */
    /*  width: 100px;
     height: 140px;
     background-color: deeppink; 
     border: 1px solid green;*/
+}
+.song-img{
+    position: relative;
 }
 
 .song-img img{
@@ -254,7 +296,10 @@ footer{
     height: 50px;
     width: 400px; */
 }
-
+#tool-row {
+    display: flex;
+    align-items: center;
+}
 #tool-row i{
     font-size: 20px;
     margin: 0 10px 10px;
@@ -282,6 +327,7 @@ footer{
     height: 5px;
     border-radius: 50px;
     width: 25%;
+    position: relative;
 }
 
 #f-right {
@@ -307,27 +353,6 @@ footer{
 
 /* media 878px */
 @media all and (max-width:1260px) and (min-width:870px){
-    
-    .time-bar{
-        width: 100px;
-        margin: 0 5px;
-    } 
-    #f-right .time-bar {
-        width: 50px;
-    }  
-    #tool-row i {
-        font-size: 15px;
-        margin: 0 5px;
-    }
-    #f-center .fa-play-circle{
-        font-size: 25px;
-    }
-    #f-left img{
-        width: 25px;
-    }
-    #f-right i{
-        font-size: 10px;
-    }
     main{
         width: calc(100% - 250px);
     }
@@ -347,6 +372,12 @@ footer{
     }
 }
 
+@media all and (min-width:870px) and (max-width:1060px){
+    .time-bar {
+        width: 350px;
+        margin: 0 5px;
+    }
+}
 
 
 
@@ -374,9 +405,6 @@ footer{
     #f-right i{
         font-size: 10px;
     }
-    header div{
-        margin-left:10%;
-    }
     main{
         width: calc(100% - 250px);
     }
@@ -396,7 +424,12 @@ footer{
     }
 }
 
-
+@media all and (min-width:660px) and (max-width:870px){
+    .time-bar {
+        width: 200px;
+        margin: 0 5px;
+    }
+}
 
 /* media 552px */
 @media all and (max-width:552px) {
@@ -454,4 +487,75 @@ footer{
         width: 200px;
         height: 200px;
     }
+}
+
+/* hover */
+
+.img-hover{
+    display: none;
+    font-size: 50px;
+}
+
+#top-nav a:hover{
+    color: #ffff;
+}
+#playlist a:hover{
+    color: #ffff;
+}
+#user span:hover{
+    color: #ffff;
+}
+.white-hover:hover{
+    color: #ffff;
+    text-decoration: underline;
+}
+#f-left i:hover{
+    color: #ffff;
+}
+#f-center .fa-play-circle:hover{
+    font-size: 45px;
+}
+ .song-img:hover .img-hover{
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #ffff;
+    z-index: 20;
+}
+.song-img:hover .opacity{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(75, 75, 75, 0.5);
+    z-index: 10;
+}
+#main-body ul li:hover a{
+    color: #ffff;
+}
+
+header a:hover{
+    font-size: 20px;
+}
+
+.time-bar:hover .time-bar-done{
+    background-color: lime;
+}
+
+.time-bar:hover:hover .pointer {
+    display: inline-block;
+}
+.pointer{
+    display: none;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #ffff;
+    position: absolute;
+    right: 0;
+    bottom: -3px;
+    z-index: 60;
 }
