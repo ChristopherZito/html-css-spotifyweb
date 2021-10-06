@@ -39,11 +39,14 @@ header{
     background-color: rgba(23, 3, 44, 0.5);
 }
 header div{
-    margin-top: 30px;
-    margin-left: 60%;
+    position: relative;
 }
 
 header a{
+    position: absolute;
+    top: 20px;
+    right: 250px;
+
     text-decoration: none;
     color: #ffffff;
     margin-top: 30px;
@@ -123,7 +126,7 @@ aside{
 
 #user img{
     width: 25px;
-    margin: 10px 0;
+    margin: 10px 10px;
     vertical-align: middle;
 }
 
@@ -173,6 +176,10 @@ main{
     text-decoration: none;
     color: #5c5f64;
     margin: 0 10px;
+}
+
+.song-collumn h4 {
+    color: #ffff;
 }
 
 .song-row {
@@ -299,7 +306,45 @@ footer{
 
 
 /* media 878px */
-@media all and (max-width:1260) and (min-width:930){
+@media all and (max-width:1260px) and (min-width:870px){
+    
+    .time-bar{
+        width: 100px;
+        margin: 0 5px;
+    } 
+    #f-right .time-bar {
+        width: 50px;
+    }  
+    #tool-row i {
+        font-size: 15px;
+        margin: 0 5px;
+    }
+    #f-center .fa-play-circle{
+        font-size: 25px;
+    }
+    #f-left img{
+        width: 25px;
+    }
+    #f-right i{
+        font-size: 10px;
+    }
+    main{
+        width: calc(100% - 250px);
+    }
+    .song-collumn {
+        width: 140px;
+        margin: 5px;;
+    }
+    .song-row {
+        flex-wrap: wrap;
+    }
+    .song-img img{
+        width: 140px;
+        height: 140px;
+    }
+    #main-body ul a{
+        font-size: 10px;
+    }
 }
 
 
@@ -307,7 +352,48 @@ footer{
 
 
 /* media 639px */
-@media all and (max-width:877) {
+@media all and (min-width:553px) and (max-width:870px) {
+    
+    .time-bar{
+        width: 100px;
+        margin: 0 5px;
+    } 
+    #f-right .time-bar {
+        width: 50px;
+    }  
+    #tool-row i {
+        font-size: 15px;
+        margin: 0 5px;
+    }
+    #f-center .fa-play-circle{
+        font-size: 25px;
+    }
+    #f-left img{
+        width: 25px;
+    }
+    #f-right i{
+        font-size: 10px;
+    }
+    header div{
+        margin-left:10%;
+    }
+    main{
+        width: calc(100% - 250px);
+    }
+    .song-collumn {
+        width: 140px;
+        margin: 5px;;
+    }
+    .song-row {
+        flex-wrap: wrap;
+    }
+    .song-img img{
+        width: 140px;
+        height: 140px;
+    }
+    #main-body ul a{
+        font-size: 10px;
+    }
 }
 
 
@@ -330,9 +416,7 @@ footer{
         padding-left: 10px;
         margin-top: 5px;
     }
-    #user img{
-        margin-left: 10px;
-    }
+    
     .time-bar{
         width: 100px;
         margin: 0 5px;
@@ -353,11 +437,9 @@ footer{
     #f-right i{
         font-size: 10px;
     }
+
     header{
         width: calc(100% + 200px);
-    }
-    header div{
-        margin-left: 20%;
     }
     main{
         width: calc(100% - 50px);
