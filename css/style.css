@@ -489,6 +489,12 @@ footer{
     }
 }
 
+@media all and (max-height:470px){
+    aside {
+        overflow: hidden;
+    } 
+}
+
 /* hover */
 
 .img-hover{
