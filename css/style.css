@@ -39,7 +39,7 @@ header{
     background-color: rgba(23, 3, 44, 0.5);
 }
 header div{
-    margin-top: 3%;
+    margin-top: 30px;
     margin-left: 60%;
 }
 
@@ -166,6 +166,7 @@ main{
 #main-body ul{
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 #main-body a{
@@ -190,6 +191,7 @@ main{
     margin: 5px 10px;
     align-items: center;
     text-align: center;
+    width: calc(100% / 6);
     /* debug */
    /*  width: 100px;
     height: 140px;
@@ -198,11 +200,15 @@ main{
 }
 
 .song-img img{
-    
     width: 150px;
     height: 150px;
     /* debug */
     /* background-color: indigo; */
+}
+
+.title-zone{
+    padding-left: 10px;
+    margin-bottom: 10px;
 }
 /* sezione footer */
 footer{
@@ -212,7 +218,6 @@ footer{
     color: #767676;
     justify-content: space-between;
     align-items: center;
-    z-index: 10;
 }
 
 #f-left {
@@ -260,7 +265,6 @@ footer{
 .time-bar{
     background-color: #5a5a5a;
     width: 500px;
-    min-width: 300px;
     height: 5px;
     margin: 0 20px;
     border-radius: 50px;
@@ -295,9 +299,7 @@ footer{
 
 
 /* media 878px */
-@media all and (min-width:878) and (max-width:1264){
-    
-
+@media all and (max-width:1260) and (min-width:930){
 }
 
 
@@ -305,14 +307,13 @@ footer{
 
 
 /* media 639px */
-@media all and (min-width:639) and (max-width:877){
-
+@media all and (max-width:877) {
 }
 
 
 
 /* media 552px */
-@media all and (max-width:552px){
+@media all and (max-width:552px) {
     aside {
         width:50px ; 
     }
@@ -334,7 +335,7 @@ footer{
     }
     .time-bar{
         width: 100px;
-        margin: 0;
+        margin: 0 5px;
     } 
     #f-right .time-bar {
         width: 50px;
@@ -349,7 +350,26 @@ footer{
     #f-left img{
         width: 25px;
     }
+    #f-right i{
+        font-size: 10px;
+    }
     header{
         width: calc(100% + 200px);
+    }
+    header div{
+        margin-left: 20%;
+    }
+    main{
+        width: calc(100% - 50px);
+    }
+    .song-collumn {
+        width: 200px;
+    }
+    .song-row {
+        flex-wrap: wrap;
+    }
+    .song-img img{
+        width: 200px;
+        height: 200px;
     }
 }
