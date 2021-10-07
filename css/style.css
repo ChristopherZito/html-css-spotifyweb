@@ -1,10 +1,10 @@
 /* generali */
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
 .white {
     color: #ffffff;
 }
@@ -13,16 +13,17 @@
     border-radius: 50%;
 }
 
-.selected{
+.selected {
      border-left: 2px solid lime;
- }
+}
 
-.selected-down{
+.selected-down {
     padding-bottom: 2px;
     border-bottom: 2px solid lime;
     position: relative;
 }
-.selected-down-left{
+/* selezionamento */
+.selected-down-left {
     position: absolute;
     bottom: -2px;
     left: 0;
@@ -40,47 +41,42 @@
     background-color: #141922;
 }
 
-
-
 /* font */
 body {
     font-family: 'Montserrat', sans-serif;
 }
 
 /* page */
-#page{
+#page {
     height: calc(100vh - 100px);
     background-color: #141922;
     color: #616161;
 }
-
+    /* clearfix */
 #page::after{
     content: "";
     display: table;
     clear: both;
 }
 
-
-
-
-
 /* header */
-header{
+header {
     position: fixed;
     z-index: 999;
     width: 100%;
     height: 100px;
     background-color: rgba(23, 3, 44, 0.5);
 }
-header div{
+
+header div {
     position: relative;
 }
 
-#main-body header a{
+#main-body header a {
     color: #ffff;
 }
 
-header a{
+header a {
     position: absolute;
     top: 20px;
     right: 280px;
@@ -95,12 +91,8 @@ header a{
     background-color: #080b12;
 }
 
-
-
-
-
 /* aside */
-aside{
+aside {
     float: left;
     width: 250px;
     height: 100%;
@@ -115,7 +107,8 @@ aside{
     width: 250px;
     padding: 10px 20px;
 }
-#logo-small{
+
+#logo-small {
     display: none;
 }
 
@@ -128,7 +121,7 @@ aside{
     /* background-color: blue; */    
 }
 
-.img-tool{
+.img-tool {
     width: 30px;
     vertical-align: middle;
 }
@@ -140,77 +133,70 @@ aside{
     margin-top: 15px;
 }
 
-#playlist ul,li{
+#playlist ul,li {
     list-style-type: none;
     margin: 15px 0;
 }
 
-#playlist a{
+#playlist a {
     text-decoration: none;
     color: #a3a3a3;
 }
 
-#playlist i{
+#playlist i {
     font-size: 40px;
     vertical-align: middle;
-    margin-right: 10px;
-    
+    margin-right: 10px;  
 }
 
-#user{
+#user {
     width: 80%;
     background-color: #000000;
 }
 
-#user img{
+#user img {
     width: 25px;
     margin: 10px 10px;
     vertical-align: middle;
 }
 
-#user-img{
+#user-img {
     background-color: #808080;
     border-radius: 50%;
     padding: 0 2px;
 }
 
-
-
-
-
-
 /* main */
-main{
+main {
     float: left;
     width: calc(100% - 250px);
     height: 100%
 }
 
-#main-body{
+#main-body {
     display: flex;
     flex-direction: column;
     height: calc(100vh - 100px);
     width: 100%;
     overflow-y: auto;
-    
-    
     /* debug */
     /* background-color: red; 
     margin: 10px;
     border: 2px solid white;*/
 }
 
-#space{
+    /* spazio per il Fixed */
+#space {
     padding-top: 100px;
 }
 
-#main-body ul{
+#main-body ul {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
 }
 
-#main-body a{
+#main-body a {
     text-decoration: none;
     color: #5c5f64;
     margin: 0 10px;
@@ -222,7 +208,6 @@ main{
 
 .song-row {
     display: flex;
-    
     /* debugs */
     /* height: 150px; 
     width: 100%;
@@ -230,37 +215,38 @@ main{
     border: darkorange 2px solid;*/
 }
 
-.song-collumn{
+.song-collumn {
     display: flex;
     flex-direction: column;
     margin: 5px 10px;
     align-items: center;
     text-align: center;
     width: calc(100% / 6);
-
     /* debug */
    /*  width: 100px;
     height: 140px;
     background-color: deeppink; 
     border: 1px solid green;*/
 }
-.song-img{
+
+.song-img {
     position: relative;
 }
 
-.song-img img{
+.song-img img {
     width: 150px;
     height: 150px;
     /* debug */
     /* background-color: indigo; */
 }
 
-.title-zone{
+.title-zone {
     padding-left: 10px;
     margin-bottom: 10px;
 }
+
 /* sezione footer */
-footer{
+footer {
     height: 100px;
     background-color: #282828;
     display: flex;
@@ -274,15 +260,15 @@ footer{
     align-items: center;
 }
 
-#f-left div{
+#f-left div {
     margin: 0 5px;
 }
 
-#f-left div i{
+#f-left div i {
     margin: 0 5px;
 }
 
-#f-left  img{
+#f-left  img {
     width: 50px;
 }
 
@@ -296,25 +282,28 @@ footer{
     height: 50px;
     width: 400px; */
 }
+
 #tool-row {
     display: flex;
     align-items: center;
 }
-#tool-row i{
+
+#tool-row i {
     font-size: 20px;
     margin: 0 10px 10px;
 }
-#f-center .fa-play-circle{
+
+#f-center .fa-play-circle {
     font-size: 40px;
 }
 
-#time-row{
+#time-row {
     display: flex;
     justify-content: space-between;
     align-items: center;    
 }
 
-.time-bar{
+.time-bar {
     background-color: #5a5a5a;
     width: 500px;
     height: 5px;
@@ -344,16 +333,14 @@ footer{
     color: #ffff;
 }
 
-
-#f-right .time-bar{
+#f-right .time-bar {
     width: 150px;
     min-width: 50px;
 }
 
-
 /* media 878px */
 @media all and (max-width:1260px) and (min-width:870px){
-    main{
+    main {
         width: calc(100% - 250px);
     }
     .song-collumn {
@@ -372,6 +359,7 @@ footer{
     }
 }
 
+/* width barra canzone */
 @media all and (min-width:870px) and (max-width:1060px){
     .time-bar {
         width: 350px;
@@ -379,13 +367,10 @@ footer{
     }
 }
 
-
-
-
 /* media 639px */
 @media all and (min-width:553px) and (max-width:870px) {
     
-    .time-bar{
+    .time-bar {
         width: 100px;
         margin: 0 5px;
     } 
@@ -396,16 +381,16 @@ footer{
         font-size: 15px;
         margin: 0 5px;
     }
-    #f-center .fa-play-circle{
+    #f-center .fa-play-circle {
         font-size: 25px;
     }
-    #f-left img{
+    #f-left img {
         width: 25px;
     }
-    #f-right i{
+    #f-right i {
         font-size: 10px;
     }
-    main{
+    main {
         width: calc(100% - 250px);
     }
     .song-collumn {
@@ -415,15 +400,15 @@ footer{
     .song-row {
         flex-wrap: wrap;
     }
-    .song-img img{
+    .song-img img {
         width: 140px;
         height: 140px;
     }
-    #main-body ul a{
+    #main-body ul a {
         font-size: 10px;
     }
 }
-
+/* width barra canzone */
 @media all and (min-width:660px) and (max-width:870px){
     .time-bar {
         width: 200px;
@@ -436,7 +421,7 @@ footer{
     aside {
         width:50px ; 
     }
-    #playlist, aside span, #logo, hr{
+    #playlist, aside span, #logo, hr {
         display: none;
     }
     #logo-small {
@@ -445,12 +430,12 @@ footer{
         width: 40px;
         padding-left: 10px;
     }
-    #top-nav a{
+    #top-nav a {
         padding-left: 10px;
         margin-top: 5px;
     }
     
-    .time-bar{
+    .time-bar {
         width: 100px;
         margin: 0 5px;
     } 
@@ -461,20 +446,20 @@ footer{
         font-size: 15px;
         margin: 0 5px;
     }
-    #f-center .fa-play-circle{
+    #f-center .fa-play-circle {
         font-size: 25px;
     }
-    #f-left img{
+    #f-left img {
         width: 25px;
     }
-    #f-right i{
+    #f-right i {
         font-size: 10px;
     }
 
-    header{
+    header {
         width: calc(100% + 200px);
     }
-    main{
+    main {
         width: calc(100% - 50px);
     }
     .song-collumn {
@@ -483,12 +468,12 @@ footer{
     .song-row {
         flex-wrap: wrap;
     }
-    .song-img img{
+    .song-img img {
         width: 200px;
         height: 200px;
     }
 }
-
+/* srcollamento verticale */
 @media all and (max-height:470px){
     aside {
         overflow: hidden;
@@ -496,32 +481,37 @@ footer{
 }
 
 /* hover */
-
-.img-hover{
+.img-hover {
     display: none;
     font-size: 50px;
 }
 
-#top-nav a:hover{
+#top-nav a:hover {
     color: #ffff;
 }
-#playlist a:hover{
+
+#playlist a:hover {
     color: #ffff;
 }
-#user span:hover{
+
+#user span:hover {
     color: #ffff;
 }
-.white-hover:hover{
+
+.white-hover:hover {
     color: #ffff;
     text-decoration: underline;
 }
-#f-left i:hover{
+
+#f-left i:hover {
     color: #ffff;
 }
-#f-center .fa-play-circle:hover{
+
+#f-center .fa-play-circle:hover {
     font-size: 45px;
 }
- .song-img:hover .img-hover{
+
+ .song-img:hover .img-hover {
     display: inline-block;
     position: absolute;
     top: 50%;
@@ -530,31 +520,34 @@ footer{
     color: #ffff;
     z-index: 20;
 }
-.song-img:hover .opacity{
+
+.song-img:hover .opacity {
     position: absolute;
     top: 0;
-    bottom: 0;
+    bottom: 4px;
     left: 0;
     right: 0;
-    background-color: rgba(75, 75, 75, 0.5);
+    background-color: rgba(0, 0, 0, 0.5);
     z-index: 10;
 }
-#main-body ul li:hover a{
+
+#main-body ul li:hover a {
     color: #ffff;
 }
 
-header a:hover{
+header a:hover {
     font-size: 20px;
 }
 
-.time-bar:hover .time-bar-done{
+.time-bar:hover .time-bar-done {
     background-color: lime;
 }
 
 .time-bar:hover:hover .pointer {
     display: inline-block;
 }
-.pointer{
+
+.pointer {
     display: none;
     width: 10px;
     height: 10px;
@@ -565,3 +558,4 @@ header a:hover{
     bottom: -3px;
     z-index: 60;
 }
+
