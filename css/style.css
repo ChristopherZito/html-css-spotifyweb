@@ -81,6 +81,8 @@ header a {
     top: 20px;
     right: 280px;
 
+    transition: all  1s;
+
     text-decoration: none;
     color: #ffffff;
     margin-top: 30px;
@@ -317,6 +319,7 @@ footer {
     border-radius: 50px;
     width: 25%;
     position: relative;
+    transition: all 0.5s;
 }
 
 #f-right {
@@ -518,7 +521,7 @@ footer {
     left: 50%;
     transform: translate(-50%, -50%);
     color: #ffff;
-    z-index: 20;
+    z-index: 20;    
 }
 
 .song-img:hover .opacity {
@@ -529,6 +532,7 @@ footer {
     right: 0;
     background-color: rgba(0, 0, 0, 0.5);
     z-index: 10;
+    transition: all 1s;
 }
 
 #main-body ul li:hover a {
@@ -543,7 +547,7 @@ header a:hover {
     background-color: lime;
 }
 
-.time-bar:hover:hover .pointer {
+.time-bar:hover .pointer {
     display: inline-block;
 }
 
